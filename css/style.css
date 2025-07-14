@@ -204,3 +204,33 @@ body.dark-mode header {
     display: flex;
   }
 }
+/* 🌙 Dark Mode */
+.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-mode header {
+  background-color: #333;
+  color: #ffd600;
+  border-bottom: 2px solid #444;
+}
+
+.dark-mode .card {
+  background-color: #1e1e1e;
+  border: 1px solid #555;
+}
+
+.dark-mode .card-btn {
+  background-color: #ffd600;
+  color: #000;
+}
+
+.dark-mode .section-block {
+  background-color: #1e1e1e;
+  color: #ccc;
+}
+
+.dark-mode .nav-links {
+  background-color: #2a2a2a;
+}
