@@ -45,3 +45,32 @@ if (heading && heading.textContent.toLowerCase().includes(value)) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
+// زر الوضع الداكن
+const toggleButton = document.getElementById('toggleMode');
+toggleButton.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  // احفظ الوضع في localStorage
+  if (document.body.classList.contains('dark-mode')) {
+    localStorage.setItem('theme', 'dark');
+    toggleButton.textContent = '☀️';
+  } else {
+    localStorage.setItem('theme', 'light');
+    toggleButton.textContent = '🌙';
+  }
+});
+
+// عند تحميل الصفحة: استرجاع الوضع
+window.addEventListener('DOMContentLoaded', () => {
+  const theme = localStorage.getItem('theme');
+  if (theme === 'dark') {
+    document.body.classList.add('dark-mode');
+    toggleButton.textContent = '☀️';
+  }
+});
+// تفعيل القائمة المتجاوبة
+const toggleMenu = document.querySelector('.menu-toggle');
+const navList = document.querySelector('.nav-list');
+
+toggleMenu.addEventListener('click', () => {
+  navList.classList.toggle('active');
+});

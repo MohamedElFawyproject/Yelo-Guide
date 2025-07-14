@@ -6,6 +6,7 @@
   --primary-font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* ---------- تنسيقات عامة ---------- */
 body {
   margin: 0;
   padding: 0;
@@ -15,129 +16,73 @@ body {
   direction: rtl;
 }
 
+/* ---------- رأس الصفحة ---------- */
 header {
   background-color: var(--yellow);
-  padding: 20px;
+  padding: 30px 20px;
   text-align: center;
-  font-size: 1.8rem;
-  font-weight: bold;
   color: var(--dark);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  border-bottom: 2px solid #e5b800;
 }
 
-main {
-  padding: 20px;
-  max-width: 900px;
+header img {
+  height: 80px;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+/* ---------- الشبكة الرئيسية للكروت ---------- */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  max-width: 1200px;
   margin: auto;
 }
 
-#search-section {
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-#searchInput {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  font-size: 1rem;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  background-color: var(--light);
+/* ---------- الكارت ---------- */
+.card {
+  background-color: #fff9c4;
+  border: 1px solid #ffeb3b;
+  border-radius: 15px;
   padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 30px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
 }
 
-select,
-textarea,
-button {
-  padding: 12px;
-  font-size: 1rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+.card:hover {
+  transform: translateY(-5px);
 }
 
-button {
+.card h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: var(--dark);
+}
+
+.card-btn {
+  display: inline-block;
+  padding: 10px 20px;
   background-color: var(--yellow);
-  border: none;
-  cursor: pointer;
+  color: black;
+  text-decoration: none;
+  border-radius: 8px;
   font-weight: bold;
   transition: background-color 0.3s ease;
-  color: var(--dark);
 }
 
-button:hover {
+.card-btn:hover {
   background-color: #e6c200;
 }
 
-#complaints-list {
-  display: none;
-}
-
-.nav-links {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  background-color: var(--yellow);
-  padding: 10px 0;
-  flex-wrap: wrap;
-}
-
-.nav-links a {
-  color: var(--dark);
-  text-decoration: none;
-  font-weight: bold;
-  padding: 8px 12px;
-  border-radius: 6px;
-  transition: background-color 0.3s;
-}
-
-.nav-links a:hover {
-  background-color: #e6c200;
-}
-
-.section-block {
-  background-color: var(--light);
-  padding: 20px;
-  margin-top: 40px;
-  border-radius: 10px;
-}
-
-.section-block h2 {
-  color: var(--dark);
-  margin-bottom: 15px;
-  border-bottom: 2px solid var(--yellow);
-  padding-bottom: 5px;
-}
-
-.section-block details {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.section-block summary {
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-
-.section-block p {
-  margin-top: 8px;
-  color: #555;
-}
-
+/* ---------- زر الرجوع للأعلى ---------- */
 #backToTop {
   position: fixed;
   bottom: 30px;
@@ -159,214 +104,13 @@ button:hover {
   background-color: #e6c200;
   transform: scale(1.1);
 }
-.highlighted {
-  background-color: #fff9c4;
-  transition: background-color 0.5s;
-}
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f9f9f9;
-  margin: 0;
-  padding: 0;
-}
 
-header {
-  text-align: center;
-  padding: 20px;
-  background-color: #ffcf00;
-  color: #1d1d1d;
-  border-bottom: 2px solid #e5b800;
-}
-
-.logo {
-  height: 60px;
-  margin-bottom: 10px;
-}
-
-h1 {
-  font-size: 2rem;
-  margin: 0;
-}
-
-.nav-links {
-  background-color: #fff7cc;
-  padding: 10px;
-  text-align: center;
-}
-
-.nav-links a {
-  margin: 0 15px;
-  color: #1d1d1d;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.nav-links a:hover {
-  text-decoration: underline;
-}
-
-#searchInput {
-  width: 90%;
-  max-width: 500px;
-  padding: 10px;
-  margin: 20px auto;
-  display: block;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-}
-
-.section-block {
-  background: white;
-  margin: 30px auto;
-  max-width: 800px;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 0 10px #ddd;
-}
-
-details summary {
-  cursor: pointer;
-  font-weight: bold;
-  padding: 5px 0;
-}
-
-.highlighted {
-  background-color: #fff3b0;
-  transition: background-color 0.5s ease-in-out;
-}
-
-#backToTop {
-  position: fixed;
-  bottom: 30px;
-  left: 30px;
-  display: none;
-  background-color: #ffcf00;
-  color: #1d1d1d;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 50%;
-  font-size: 1.2rem;
-  cursor: pointer;
-  box-shadow: 0 0 10px #aaa;
-}
-.logo {
-  height: 100px;
-  max-width: 300px;
-  margin-bottom: 10px;
-}
-header {
-  text-align: center;
-  padding: 60px 30px;
-  background-color: #ffcf00;
-  color: #1d1d1d;
-  border-bottom: 2px solid #e5b800;
-}
-
-.logo {
-  height: auto;
-  max-width: 720px; /* تقدر تزود لـ 300 لو حابب أكبر */
-  margin-bottom: 10px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-h1 {
-  font-size: 2.5rem;
-  margin-top: 10px;
-}
-header {
-  background-color: #ffcf00;
-  border-bottom: 2px solid #e5b800;
-  padding: 20px 30px;
-}
-
-.header-container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* يبدأ من اليمين لأن اللغة RTL */
-  gap: 20px;
-  direction: rtl;
-}
-
-.logo {
-  height: 100px;
-  max-width: 500px;
-}
-
-h1 {
-  font-size: 6rem;
-  margin: 0;
-  color: #1d1d1d;
-}
-/* التنسيق العام للأقسام */
-.section-block details {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  padding: 10px;
-  cursor: pointer;
-}
-.section-block summary {
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-.section-block p {
-  margin-top: 8px;
-  color: #555;
-}
-.card {
-  background-color: #ffffff;
-  border: 2px solid #FFD600;
-  border-radius: 12px;
-  padding: 20px;
-  margin: 10px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: scale(1.02);
-}
-
-.card h2 {
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.card-btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background-color: #FFD600;
-  color: #000;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-}
+/* ---------- كارت الرجوع للصفحة الرئيسية ---------- */
 .back-card {
   position: absolute;
   top: 20px;
   right: 20px;
-  background-color: #FFD600;
-  padding: 10px 20px;
-  border-radius: 10px;
-  font-weight: bold;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-.back-card a {
-  text-decoration: none;
-  color: black;
-}
-.back-card {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background-color: #FFD600;
+  background-color: var(--yellow);
   padding: 10px 20px;
   border-radius: 10px;
   font-weight: bold;
@@ -378,73 +122,85 @@ h1 {
   text-decoration: none;
   color: black;
 }
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 30px;
-}
-
-.card {
-  background-color: #fff9c4;
-  border: 1px solid #ffeb3b;
-  border-radius: 15px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card h2 {
-  margin-bottom: 10px;
-  font-size: 18px;
-}
-
-.card-btn {
-  display: inline-block;
-  padding: 8px 16px;
+/* زر تغيير الوضع */
+#toggleMode {
+  position: absolute;
+  top: 20px;
+  left: 20px;
   background-color: #ffd600;
-  color: black;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* الوضع الداكن */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode .card {
+  background-color: #1e1e1e;
+  border-color: #333;
+  color: #f1f1f1;
+}
+
+body.dark-mode .card-btn,
+body.dark-mode #toggleMode {
+  background-color: #333;
+  color: #ffd600;
+}
+
+body.dark-mode header {
+  background-color: #1e1e1e;
+  color: #ffd600;
+  border-bottom: 2px solid #444;
+}
+.navbar {
+  background-color: var(--yellow);
+  padding: 10px 20px;
+  position: relative;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-list {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.nav-list li a {
   text-decoration: none;
-  border-radius: 8px;
+  color: black;
   font-weight: bold;
 }
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 30px;
-}
 
-.card {
-  background-color: #fff9c4;
-  border: 1px solid #ffeb3b;
-  border-radius: 15px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease;
-}
+/* موبايل */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
 
-.card:hover {
-  transform: translateY(-5px);
-}
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    margin-top: 10px;
+  }
 
-.card h2 {
-  margin-bottom: 10px;
-  font-size: 18px;
-}
-
-.card-btn {
-  display: inline-block;
-  padding: 8px 16px;
-  background-color: #ffd600;
-  color: black;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
+  .nav-list.active {
+    display: flex;
+  }
 }
