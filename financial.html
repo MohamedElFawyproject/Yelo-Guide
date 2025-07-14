@@ -1,19 +1,90 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>إدارة مالية</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إدارة مالية - Yelo Guide</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="back-card">
-    <a href="index.html">⬅ الصفحة الرئيسية</a>
-  </div>
+
+  <div class="back-card"><a href="index.html">الصفحة الرئيسية</a></div>
 
   <main>
-    <h1>إدارة مالية</h1>
-    <!-- سيتم إضافة التصنيفات الفرعية هنا لاحقًا -->
-  </main>
-</body>
-</html>
+    <section class="section-block">
+      <h2>🟡 تأمين دبي / تحويل بنكي</h2>
+
+      <div class="toggle-group">
+        <button class="toggle-btn" onclick="toggleSection('start')">بداية الطلب</button>
+        <button class="toggle-btn" onclick="toggleSection('follow')">متابعة الطلب</button>
+        <button class="toggle-btn" onclick="toggleSection('close')">الإغلاق</button>
+      </div>
+
+      <div id="start" class="hidden section-inner">
+        <h3>بداية الطلب</h3>
+        <button onclick="toggleSub('start-support')">ممثل الدعم</button>
+        <button onclick="toggleSub('start-admin')">إداري القسم</button>
+
+        <div id="start-support" class="hidden sub-box">
+          <h4>ممثل الدعم</h4>
+          <ul>
+            <li>داخلياً: التواصل مع العميل وتسجيل الطلب</li>
+            <li>الإدارة الخارجية: التنسيق مع الفريق المالي بدبي</li>
+            <li>العميل: تأكيد البيانات البنكية وإرسال صورة الحساب</li>
+          </ul>
+        </div>
+
+        <div id="start-admin" class="hidden sub-box">
+          <h4>إداري القسم</h4>
+          <ul>
+            <li>داخلياً: اعتماد الطلب ورفعه للإدارة</li>
+            <li>الإدارة الخارجية: متابعة الإجراءات مع دبي</li>
+            <li>العميل: إشعار العميل بقبول الطلب</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="follow" class="hidden section-inner">
+        <h3>متابعة الطلب</h3>
+        <button onclick="toggleSub('follow-support')">ممثل الدعم</button>
+        <button onclick="toggleSub('follow-admin')">إداري القسم</button>
+
+        <div id="follow-support" class="hidden sub-box">
+          <h4>ممثل الدعم</h4>
+          <ul>
+            <li>داخلياً: متابعة حالة الطلب</li>
+            <li>الإدارة الخارجية: استعلام من دبي</li>
+            <li>العميل: تحديث العميل بالخطوات</li>
+          </ul>
+        </div>
+
+        <div id="follow-admin" class="hidden sub-box">
+          <h4>إداري القسم</h4>
+          <ul>
+            <li>داخلياً: مراجعة المتابعة</li>
+            <li>الإدارة الخارجية: التواصل مع دبي</li>
+            <li>العميل: إرسال أي وثائق ناقصة</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="close" class="hidden section-inner">
+        <h3>الإغلاق</h3>
+        <button onclick="toggleSub('close-support')">ممثل الدعم</button>
+        <button onclick="toggleSub('close-admin')">إداري القسم</button>
+
+        <div id="close-support" class="hidden sub-box">
+          <h4>ممثل الدعم</h4>
+          <ul>
+            <li>داخلياً: تأكيد تحويل المبلغ</li>
+            <li>الإدارة الخارجية: توثيق المعاملة</li>
+            <li>العميل: إشعار العميل بالإغلاق</li>
+          </ul>
+        </div>
+
+        <div id="close-admin" class="hidden sub-box">
+          <h4>إداري القسم</h4>
+          <ul>
+            <li>داخلياً: إغلاق الملف</li>
+            <li>الإدارة الخارجية: أرشفة الطلب</li>
+            <li
