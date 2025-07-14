@@ -6,7 +6,6 @@
   --primary-font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* ---------- تنسيقات عامة ---------- */
 body {
   margin: 0;
   padding: 0;
@@ -16,19 +15,14 @@ body {
   direction: rtl;
 }
 
-/* ---------- رأس الصفحة ---------- */
 header {
   background-color: var(--yellow);
-  padding: 30px 20px;
-  text-align: center;
-  color: var(--dark);
-  border-bottom: 2px solid #e5b800;
-}
-
-header img {
-  height: 80px;
-  max-width: 100%;
-  margin-bottom: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 header h1 {
@@ -36,17 +30,18 @@ header h1 {
   margin: 0;
 }
 
-/* ---------- الشبكة الرئيسية للكروت ---------- */
-.grid-container {
+.logo {
+  height: 80px;
+  max-width: 300px;
+}
+
+main.grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   padding: 30px;
-  max-width: 1200px;
-  margin: auto;
 }
 
-/* ---------- الكارت ---------- */
 .card {
   background-color: #fff9c4;
   border: 1px solid #ffeb3b;
@@ -62,27 +57,27 @@ header h1 {
 }
 
 .card h2 {
-  margin-bottom: 15px;
-  font-size: 20px;
-  color: var(--dark);
+  margin-bottom: 10px;
+  font-size: 18px;
 }
 
 .card-btn {
   display: inline-block;
-  padding: 10px 20px;
-  background-color: var(--yellow);
+  padding: 8px 16px;
+  background-color: #ffd600;
   color: black;
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
-  transition: background-color 0.3s ease;
 }
 
-.card-btn:hover {
-  background-color: #e6c200;
+#toggleDarkMode {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
-/* ---------- زر الرجوع للأعلى ---------- */
 #backToTop {
   position: fixed;
   bottom: 30px;
@@ -105,132 +100,29 @@ header h1 {
   transform: scale(1.1);
 }
 
-/* ---------- كارت الرجوع للصفحة الرئيسية ---------- */
-.back-card {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background-color: var(--yellow);
-  padding: 10px 20px;
-  border-radius: 10px;
-  font-weight: bold;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-}
-
-.back-card a {
-  text-decoration: none;
-  color: black;
-}
-/* زر تغيير الوضع */
-#toggleMode {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background-color: #ffd600;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 1.2rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-/* الوضع الداكن */
-body.dark-mode {
-  background-color: #121212;
-  color: #f1f1f1;
-}
-
-body.dark-mode .card {
-  background-color: #1e1e1e;
-  border-color: #333;
-  color: #f1f1f1;
-}
-
-body.dark-mode .card-btn,
-body.dark-mode #toggleMode {
-  background-color: #333;
-  color: #ffd600;
-}
-
-body.dark-mode header {
-  background-color: #1e1e1e;
-  color: #ffd600;
-  border-bottom: 2px solid #444;
-}
-.navbar {
-  background-color: var(--yellow);
-  padding: 10px 20px;
-  position: relative;
-}
-
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-.nav-list {
-  display: flex;
-  gap: 15px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  flex-wrap: wrap;
-}
-
-.nav-list li a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-}
-
-/* موبايل */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-list {
-    display: none;
-    flex-direction: column;
-    margin-top: 10px;
-  }
-
-  .nav-list.active {
-    display: flex;
-  }
-}
-/* 🌙 Dark Mode */
+/* الوضع الليلي */
 .dark-mode {
   background-color: #121212;
-  color: #e0e0e0;
+  color: #f0f0f0;
 }
 
 .dark-mode header {
   background-color: #333;
-  color: #ffd600;
-  border-bottom: 2px solid #444;
+  color: #fff;
 }
 
 .dark-mode .card {
   background-color: #1e1e1e;
-  border: 1px solid #555;
+  border-color: #555;
+  color: #f0f0f0;
 }
 
 .dark-mode .card-btn {
-  background-color: #ffd600;
+  background-color: #fdd835;
   color: #000;
 }
 
-.dark-mode .section-block {
-  background-color: #1e1e1e;
-  color: #ccc;
-}
-
-.dark-mode .nav-links {
-  background-color: #2a2a2a;
+.dark-mode #backToTop {
+  background-color: #fdd835;
+  color: #000;
 }
