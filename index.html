@@ -27,3 +27,39 @@
   <script src="assets/js/script.js"></script>
 </body>
 </html>
+<div class="card classification-card" onclick="toggleSupportOptions(this)">
+  <h3>تأمين دبي / تحويل بنكي</h3>
+</div>
+
+<div class="support-options" style="display:none;">
+  <div class="card" onclick="showSteps(this, 'support')">ممثل الدعم</div>
+  <div class="card" onclick="showSteps(this, 'admin')">إداري القسم</div>
+</div>
+
+<div class="steps-container" style="display:none;">
+  <div class="card step" data-role="support">
+    <h4>بداية الطلب</h4>
+    <p>الشرح الخاص ببداية الطلب لممثل الدعم</p>
+  </div>
+  <div class="card step" data-role="support">
+    <h4>متابعة الطلب</h4>
+    <p>الشرح الخاص بمتابعة الطلب لممثل الدعم</p>
+  </div>
+  <div class="card step" data-role="support">
+    <h4>الإغلاق</h4>
+    <p>الشرح الخاص بالإغلاق لممثل الدعم</p>
+  </div>
+
+  <div class="card step" data-role="admin">
+    <h4>بداية الطلب</h4>
+    <p>الشرح الخاص ببداية الطلب لإداري القسم</p>
+  </div>
+  <div class="card step" data-role="admin">
+    <h4>متابعة الطلب</h4>
+    <p>الشرح الخاص بمتابعة الطلب لإداري القسم</p>
+  </div>
+  <div class="card step" data-role="admin">
+    <h4>الإغلاق</h4>
+    <p>الشرح الخاص بالإغلاق لإداري القسم</p>
+  </div>
+</div>
