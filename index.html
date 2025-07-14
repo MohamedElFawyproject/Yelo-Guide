@@ -1,143 +1,33 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>تأمين دبي / تحويل بنكي</title>
-  <style>
-    body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      padding: 20px;
-      background-color: #f9f9f9;
-    }
-    .section {
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      padding: 15px;
-      background-color: #fff9c4;
-    }
-    .btn {
-      display: block;
-      margin: 10px 0;
-      padding: 10px;
-      background-color: #ffd600;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    .content-block {
-      display: none;
-      margin-top: 10px;
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 10px;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yelo Guide</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>تأمين دبي / تحويل بنكي</h1>
+  <header class="header-container">
+    <img src="https://www.iyelo.com/assets/images/yelo-logo.svg" alt="Yelo Logo" class="logo">
+    <h1>Yelo Guide</h1>
+    <button id="darkModeToggle">🌓</button>
+  </header>
 
-  <div class="section">
-    <button class="btn" onclick="showStage('start')">بداية الطلب</button>
-    <button class="btn" onclick="showStage('follow')">متابعة الطلب</button>
-    <button class="btn" onclick="showStage('close')">الإغلاق</button>
-  </div>
-
-  <div id="start" class="content-block">
-    <h3>بداية الطلب</h3>
-    <button class="btn" onclick="showInner('start-support')">ممثل الدعم</button>
-    <button class="btn" onclick="showInner('start-admin')">إداري القسم</button>
-
-    <div id="start-support" class="content-block">
-      <h4>ممثل الدعم</h4>
-      <ul>
-        <li>داخلياً: مثال لمحتوى داخلي</li>
-        <li>الإدارة الخارجية: مثال للإدارة الخارجية</li>
-        <li>العميل: مثال للعميل</li>
-      </ul>
-    </div>
-
-    <div id="start-admin" class="content-block">
-      <h4>إداري القسم</h4>
-      <ul>
-        <li>داخلياً: مثال لمحتوى داخلي</li>
-        <li>الإدارة الخارجية: مثال للإدارة الخارجية</li>
-        <li>العميل: مثال للعميل</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="follow" class="content-block">
-    <h3>متابعة الطلب</h3>
-    <button class="btn" onclick="showInner('follow-support')">ممثل الدعم</button>
-    <button class="btn" onclick="showInner('follow-admin')">إداري القسم</button>
-
-    <div id="follow-support" class="content-block">
-      <h4>ممثل الدعم</h4>
-      <ul>
-        <li>داخلياً: مثال لمحتوى داخلي</li>
-        <li>الإدارة الخارجية: مثال للإدارة الخارجية</li>
-        <li>العميل: مثال للعميل</li>
-      </ul>
-    </div>
-
-    <div id="follow-admin" class="content-block">
-      <h4>إداري القسم</h4>
-      <ul>
-        <li>داخلياً: مثال لمحتوى داخلي</li>
-        <li>الإدارة الخارجية: مثال للإدارة الخارجية</li>
-        <li>العميل: مثال للعميل</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="close" class="content-block">
-    <h3>الإغلاق</h3>
-    <button class="btn" onclick="showInner('close-support')">ممثل الدعم</button>
-    <button class="btn" onclick="showInner('close-admin')">إداري القسم</button>
-
-    <div id="close-support" class="content-block">
-      <h4>ممثل الدعم</h4>
-      <ul>
-        <li>داخلياً: مثال لمحتوى داخلي</li>
-        <li>الإدارة الخارجية: مثال للإدارة الخارجية</li>
-        <li>العميل: مثال للعميل</li>
-      </ul>
-    </div>
-
-    <div id="close-admin" class="content-block">
-      <h4>إداري القسم</h4>
-      <ul>
-        <li>داخلياً: مثال لمحتوى داخلي</li>
-        <li>الإدارة الخارجية: مثال للإدارة الخارجية</li>
-        <li>العميل: مثال للعميل</li>
-      </ul>
-    </div>
-  </div>
+  <main class="grid-container">
+    <div class="card"><h2>إدارة مالية</h2><a href="financial.html" class="card-btn">الذهاب</a></div>
+    <div class="card"><h2>الإدارة القانونية</h2><a href="legal.html" class="card-btn">الذهاب</a></div>
+    <div class="card"><h2>إدارة التشغيل</h2><a href="operations.html" class="card-btn">الذهاب</a></div>
+    <div class="card"><h2>إدارة المتابعة والتحصيل</h2><a href="collection.html" class="card-btn">الذهاب</a></div>
+    <div class="card"><h2>إدارة البرامج</h2><a href="programs.html" class="card-btn">الذهاب</a></div>
+    <div class="card"><h2>إدارة الصيانة</h2><a href="maintenance.html" class="card-btn">الذهاب</a></div>
+    <div class="card"><h2>طلبات مالية أخرى</h2><a href="other-financial.html" class="card-btn">الذهاب</a></div>
+    <div class="card"><h2>إدارة رعاية العملاء</h2><a href="customers.html" class="card-btn">الذهاب</a></div>
+  </main>
 
   <script>
-    function showStage(stageId) {
-      // أخفي كل المراحل
-      document.querySelectorAll('.content-block').forEach(el => {
-        if (!el.closest('.content-block')) el.style.display = 'none';
-      });
-
-      // أظهر المرحلة المطلوبة
-      const selectedStage = document.getElementById(stageId);
-      if (selectedStage) selectedStage.style.display = 'block';
-    }
-
-    function showInner(innerId) {
-      // أخفي كل النوافذ الداخلية
-      document.querySelectorAll('.content-block .content-block').forEach(el => el.style.display = 'none');
-
-      // أظهر النافذة المطلوبة
-      const selectedInner = document.getElementById(innerId);
-      if (selectedInner) selectedInner.style.display = 'block';
-    }
+    document.getElementById('darkModeToggle').onclick = () => {
+      document.body.classList.toggle('dark-mode');
+    };
   </script>
 </body>
 </html>
